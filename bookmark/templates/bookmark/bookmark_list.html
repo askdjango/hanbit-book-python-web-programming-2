@@ -1,0 +1,10 @@
+이 파일이 bookmark_list.html 파일 입니다!!!
+
+<ul>
+{% for bookmark in bookmark_list %}
+<li>
+    {{ bookmark.title }} : {{ bookmark.url }}
+</li>
+{% endfor %}
+</ul>
+
