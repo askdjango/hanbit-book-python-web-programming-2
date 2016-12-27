@@ -2,7 +2,7 @@
 {% for post in post_list %}
 <li>
     {{ post.id }}
-    {{ post.title }}
+    <a href="{% url "blog:post_detail" post.slug %}">{{ post.title }}</a>
 </li>
 {% endfor %}
 </ul>
