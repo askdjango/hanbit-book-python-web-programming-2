@@ -1,0 +1,23 @@
+<ul>
+{% for post in post_list %}
+<li>
+    {{ post.id }}
+    {{ post.title }}
+</li>
+{% endfor %}
+</ul>
+
+<hr/>
+
+{% if page_obj %}
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">이전</a>
+    {% endif %}
+
+    <b>{{ page_obj.number }}</b>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">다음</a>
+    {% endif %}
+{% endif %}
+
